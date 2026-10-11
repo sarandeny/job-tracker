@@ -45,7 +45,9 @@ def run(
     seen: dict[str, str] = _load_json(data_dir / "seen.json", {})
     previous = [Job.from_dict(d) for d in _load_json(data_dir / "jobs.json", [])]
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    first_run = not seen
+    state: dict = _load_json(data_dir / "state.json", {})
+    # "First run" lasts until an alert has actually been delivered (or none was wanted).
+    first_run = not state.get("initialized")
 
     matches: dict[str, Job] = {}
     status: dict[str, dict] = {}
@@ -90,26 +92,38 @@ def run(
     (docs_dir / "index.html").write_text(build_html(payload), encoding="utf-8")
 
     sent: list[str] = []
+    delivered = True
     if not dry_run:
         (data_dir / "jobs.json").write_text(
             json.dumps([j.to_dict() for j in matches.values()], indent=1, ensure_ascii=False),
             encoding="utf-8",
         )
-        for key, job in matches.items():
-            seen.setdefault(key, job.first_seen)
-        (data_dir / "seen.json").write_text(json.dumps(seen, indent=1), encoding="utf-8")
 
-        if do_notify and to_push:
+        if do_notify and (to_push or first_run):
             url = env.get("DASHBOARD_URL") or cfg["notify"].get("dashboard_url", "")
             title, body = notify_mod.build_digest(
                 to_push, cfg["notify"].get("max_items_in_push", 6), url, initial=first_run
             )
             sent = notify_mod.send_all(title, body, url, env)
+            delivered = bool(sent)
+            if not delivered:
+                log.warning(
+                    "No alert was delivered (is the NTFY_TOPIC secret set?). "
+                    "Jobs stay marked as new so the next run tries again."
+                )
+
+        # Only remember jobs as seen once the person has actually been told about them.
+        if delivered:
+            for key, job in matches.items():
+                seen.setdefault(key, job.first_seen)
+            (data_dir / "seen.json").write_text(json.dumps(seen, indent=1), encoding="utf-8")
+            (data_dir / "state.json").write_text(json.dumps({"initialized": True}), encoding="utf-8")
 
     return {
         "matches": len(matches),
         "new": len(new_jobs),
         "pushed": len(to_push) if sent else 0,
+        "alert_delivered": bool(sent),
         "channels": sent,
         "failed_sources": [n for n, s in status.items() if not s["ok"]],
         "first_run": first_run,
