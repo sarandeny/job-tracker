@@ -17,6 +17,11 @@ def build_digest(
     jobs: list[Job], max_items: int, dashboard_url: str = "", initial: bool = False
 ) -> tuple[str, str]:
     """Return (title, body). Title is ASCII so it is safe in an HTTP header."""
+    if not jobs:
+        body = "No matching jobs right now. You will get an alert when new ones appear."
+        if dashboard_url:
+            body += f"\n\nDashboard: {dashboard_url}"
+        return "Job tracker is live: no matches yet", body
     top = sorted(jobs, key=lambda j: j.score, reverse=True)[:max_items]
     if initial:
         title = f"Job tracker is live: {len(jobs)} matches found"
