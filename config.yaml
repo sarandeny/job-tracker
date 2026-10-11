@@ -1,0 +1,158 @@
+# Job tracker settings. Edit this file to change what counts as a match.
+
+profile:
+  # Title phrases you want, with a weight for how strongly each one counts.
+  # A job is only kept if its title contains at least one of these.
+  title_terms:
+    "soc analyst": 40
+    "cyber security analyst": 40
+    "cybersecurity analyst": 40
+    "security analyst": 40
+    "security operations": 40
+    "security engineer": 38
+    "detection engineer": 38
+    "threat detection": 36
+    "incident response": 36
+    "incident responder": 36
+    "sentinel": 36
+    "threat hunt": 34
+    "cyber defense": 32
+    "cloud security": 32
+    "threat intelligence": 30
+    "vulnerability": 30
+    "defender": 30
+    "security associate": 30
+    "security specialist": 28
+
+  # Titles containing any of these words are dropped (too senior, or not a hands-on security role).
+  exclude_title_words:
+    - senior
+    - sr
+    - principal
+    - staff
+    - lead
+    - manager
+    - director
+    - head
+    - vp
+    - architect
+    - distinguished
+    - fellow
+    - sales
+    - account
+    - recruiter
+    - customer engineer
+    - iii
+    - iv
+
+  # Skills found in the job text add points (5 each, up to 25).
+  skills:
+    - sentinel
+    - kql
+    - defender
+    - splunk
+    - siem
+    - soar
+    - azure
+    - edr
+    - incident response
+    - threat hunting
+    - vulnerability management
+    - mitre att&ck
+    - python
+    - powershell
+    - crowdstrike
+    - qradar
+    - entra
+    - purview
+    - nessus
+    - qualys
+
+  # Only India locations are kept. Add or remove cities as you like.
+  locations_include:
+    - india
+    - bengaluru
+    - bangalore
+    - hyderabad
+    - pune
+    - chennai
+    - mumbai
+    - gurgaon
+    - gurugram
+    - noida
+    - delhi
+    - kochi
+    - trivandrum
+    - thiruvananthapuram
+    - coimbatore
+    - kolkata
+    - ahmedabad
+
+  # Drop jobs whose stated minimum experience is above this many years.
+  max_years_required: 3
+  # Drop jobs posted longer ago than this.
+  max_age_days: 30
+  # Jobs scoring below this are dropped.
+  min_score: 45
+
+  # Bonus points for companies you care about most.
+  priority_companies:
+    Microsoft: 15
+    Google: 10
+    Meta: 10
+    NVIDIA: 8
+    Amazon: 6
+    IBM: 6
+
+# Search words sent to company career sites.
+search_queries:
+  - security analyst
+  - security engineer
+  - SOC analyst
+  - threat detection
+  - incident response
+  - cyber security
+
+sources:
+  amazon:
+    enabled: true
+    location: India
+
+  # Companies on Workday career sites. If one of these breaks, the dashboard
+  # shows the error and the others keep working.
+  workday:
+    - {name: NVIDIA,     host: nvidia.wd5.myworkdayjobs.com,      tenant: nvidia,     site: NVIDIAExternalCareerSite}
+    - {name: Adobe,      host: adobe.wd5.myworkdayjobs.com,       tenant: adobe,      site: external_experienced}
+    - {name: Salesforce, host: salesforce.wd12.myworkdayjobs.com, tenant: salesforce, site: External_Career_Site}
+    - {name: Dell,       host: dell.wd1.myworkdayjobs.com,        tenant: dell,       site: External}
+    - {name: Intel,      host: intel.wd1.myworkdayjobs.com,       tenant: intel,      site: External}
+    - {name: Qualcomm,   host: qualcomm.wd5.myworkdayjobs.com,    tenant: qualcomm,   site: External}
+    - {name: Mastercard, host: mastercard.wd1.myworkdayjobs.com,  tenant: mastercard, site: CorporateCareers}
+    - {name: PayPal,     host: paypal.wd1.myworkdayjobs.com,      tenant: paypal,     site: jobs}
+    - {name: Walmart,    host: walmart.wd5.myworkdayjobs.com,     tenant: walmart,    site: WalmartExternal}
+
+  # Companies on Greenhouse public job boards.
+  greenhouse:
+    - {name: Cloudflare, board: cloudflare}
+    - {name: Datadog,    board: datadog}
+    - {name: Okta,       board: okta}
+
+# Companies without a public feed this tracker can read. The dashboard shows
+# one-click, pre-filtered searches for them instead.
+links:
+  - {name: Microsoft, url: "https://jobs.careers.microsoft.com/global/en/search?q=security%20analyst&lc=India&l=en_us&pg=1&pgSz=20&o=Recent"}
+  - {name: Google,    url: "https://www.google.com/about/careers/applications/jobs/results/?q=security%20analyst&location=India"}
+  - {name: Meta,      url: "https://www.metacareers.com/jobs?q=security%20analyst"}
+  - {name: IBM,       url: "https://www.ibm.com/careers/search?q=security%20analyst&field_keyword_05[0]=India"}
+  - {name: Apple,     url: "https://jobs.apple.com/en-in/search?search=security%20analyst&sort=newest"}
+  - {name: Accenture, url: "https://www.accenture.com/in-en/careers/jobsearch?jk=security%20analyst&sb=1"}
+  - {name: Oracle,    url: "https://careers.oracle.com/jobs/#en/sites/jobsearch/requisitions?keyword=security%20analyst&location=India"}
+  - {name: Capgemini, url: "https://www.capgemini.com/careers/join-capgemini/job-search/?search=security%20analyst&country_code=en-in"}
+
+notify:
+  # Only jobs scoring at least this much trigger a push notification.
+  min_score_for_push: 55
+  max_items_in_push: 6
+  # Where the dashboard lives (used for the tap-through link). Can also be set
+  # with the DASHBOARD_URL environment variable.
+  dashboard_url: ""
