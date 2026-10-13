@@ -5,7 +5,7 @@
   "title": "Security Engineer, GPU Kernel Driver",
   "location": "2 Locations",
   "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Security-Engineer--GPU-Kernel-Driver_JR2026525",
-  "posted": "Posted 13 Days Ago",
+  "posted": "Posted 14 Days Ago",
   "summary": "",
   "score": 46,
   "reasons": [
@@ -16,12 +16,28 @@
   "first_seen": "2026-10-11 16:27 UTC"
  },
  {
+  "key": "NVIDIA:JR2021888",
+  "company": "NVIDIA",
+  "title": "Evaluation and ML Systems Engineer, AI Safety and Security Engineering",
+  "location": "6 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Evaluation-and-ML-Systems-Engineer--AI-Safety-and-Security-Engineering_JR2021888",
+  "posted": "Posted Yesterday",
+  "summary": "",
+  "score": 46,
+  "reasons": [
+   "title: security engineer",
+   "multiple locations, check",
+   "priority company"
+  ],
+  "first_seen": "2026-10-13 10:58 UTC"
+ },
+ {
   "key": "Adobe:R171091",
   "company": "Adobe",
   "title": "Information Security Analyst",
   "location": "Bangalore",
   "url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/Bangalore/Information-Security-Analyst_R171091",
-  "posted": "Posted 24 Days Ago",
+  "posted": "Posted 25 Days Ago",
   "summary": "",
   "score": 55,
   "reasons": [
@@ -29,5 +45,20 @@
    "India"
   ],
   "first_seen": "2026-10-11 16:27 UTC"
+ },
+ {
+  "key": "Salesforce:JR355204",
+  "company": "Salesforce",
+  "title": "Product Security Engineer",
+  "location": "India - Hyderabad",
+  "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/India---Hyderabad/Product-Security-Engineer_JR355204",
+  "posted": "Posted Today",
+  "summary": "",
+  "score": 53,
+  "reasons": [
+   "title: security engineer",
+   "India"
+  ],
+  "first_seen": "2026-10-13 10:58 UTC"
  }
 ]
