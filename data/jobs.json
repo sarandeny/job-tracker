@@ -1,11 +1,27 @@
 [
  {
+  "key": "Amazon:10577100",
+  "company": "Amazon",
+  "title": "Multi-lingual ES - Spanish, Global Security Operations Center",
+  "location": "Bengaluru, Karnataka, IND",
+  "url": "https://www.amazon.jobs/en/jobs/10577100/multi-lingual-es-spanish-global-security-operations-center",
+  "posted": "October 13, 2026",
+  "summary": "The mission of Amazon Global Security Operations Centre (GSOC) is to mitigate security and operational risks to our associates, physical assets, and brand. GSOC supports Amazon Worldwide Stores by providing - High school or equivalent diploma - Knowledge of Microsoft Office produ",
+  "score": 61,
+  "reasons": [
+   "title: security operations",
+   "India",
+   "priority company"
+  ],
+  "first_seen": "2026-10-14 08:58 UTC"
+ },
+ {
   "key": "NVIDIA:JR2026525",
   "company": "NVIDIA",
   "title": "Security Engineer, GPU Kernel Driver",
   "location": "2 Locations",
   "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Security-Engineer--GPU-Kernel-Driver_JR2026525",
-  "posted": "Posted 14 Days Ago",
+  "posted": "Posted 15 Days Ago",
   "summary": "",
   "score": 46,
   "reasons": [
@@ -21,7 +37,7 @@
   "title": "Evaluation and ML Systems Engineer, AI Safety and Security Engineering",
   "location": "6 Locations",
   "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Evaluation-and-ML-Systems-Engineer--AI-Safety-and-Security-Engineering_JR2021888",
-  "posted": "Posted Yesterday",
+  "posted": "Posted 2 Days Ago",
   "summary": "",
   "score": 46,
   "reasons": [
@@ -37,7 +53,7 @@
   "title": "Information Security Analyst",
   "location": "Bangalore",
   "url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/Bangalore/Information-Security-Analyst_R171091",
-  "posted": "Posted 25 Days Ago",
+  "posted": "Posted 26 Days Ago",
   "summary": "",
   "score": 55,
   "reasons": [
@@ -45,20 +61,5 @@
    "India"
   ],
   "first_seen": "2026-10-11 16:27 UTC"
- },
- {
-  "key": "Salesforce:JR355204",
-  "company": "Salesforce",
-  "title": "Product Security Engineer",
-  "location": "India - Hyderabad",
-  "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/India---Hyderabad/Product-Security-Engineer_JR355204",
-  "posted": "Posted Today",
-  "summary": "",
-  "score": 53,
-  "reasons": [
-   "title: security engineer",
-   "India"
-  ],
-  "first_seen": "2026-10-13 10:58 UTC"
  }
 ]
