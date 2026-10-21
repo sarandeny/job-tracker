@@ -1,11 +1,27 @@
 [
  {
+  "key": "NVIDIA:JR2021887",
+  "company": "NVIDIA",
+  "title": "Security Research Engineer, AI Safety and Security Engineering",
+  "location": "6 Locations",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Security-Research-Engineer--AI-Safety-and-Security-Engineering_JR2021887",
+  "posted": "Posted Yesterday",
+  "summary": "",
+  "score": 46,
+  "reasons": [
+   "title: security engineer",
+   "multiple locations, check",
+   "priority company"
+  ],
+  "first_seen": "2026-10-21 08:50 UTC"
+ },
+ {
   "key": "NVIDIA:JR2026525",
   "company": "NVIDIA",
   "title": "Security Engineer, GPU Kernel Driver",
   "location": "2 Locations",
   "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Security-Engineer--GPU-Kernel-Driver_JR2026525",
-  "posted": "Posted 21 Days Ago",
+  "posted": "Posted 22 Days Ago",
   "summary": "",
   "score": 46,
   "reasons": [
@@ -16,12 +32,12 @@
   "first_seen": "2026-10-11 16:27 UTC"
  },
  {
-  "key": "NVIDIA:JR2021888",
+  "key": "NVIDIA:JR2021886",
   "company": "NVIDIA",
-  "title": "Evaluation and ML Systems Engineer, AI Safety and Security Engineering",
+  "title": "Harness and Platform Engineer, AI Safety and Security Engineering",
   "location": "6 Locations",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Evaluation-and-ML-Systems-Engineer--AI-Safety-and-Security-Engineering_JR2021888",
-  "posted": "Posted 8 Days Ago",
+  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Santa-Clara/Harness-and-Platform-Engineer--AI-Safety-and-Security-Engineering_JR2021886",
+  "posted": "Posted Yesterday",
   "summary": "",
   "score": 46,
   "reasons": [
@@ -29,22 +45,6 @@
    "multiple locations, check",
    "priority company"
   ],
-  "first_seen": "2026-10-13 10:58 UTC"
- },
- {
-  "key": "NVIDIA:JR2023268",
-  "company": "NVIDIA",
-  "title": "Insider Threat Detection Engineer",
-  "location": "6 Locations",
-  "url": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/US-CA-Remote/Insider-Threat-Detection-Engineer_JR2023268",
-  "posted": "Posted 6 Days Ago",
-  "summary": "",
-  "score": 46,
-  "reasons": [
-   "title: detection engineer",
-   "multiple locations, check",
-   "priority company"
-  ],
-  "first_seen": "2026-10-15 08:33 UTC"
+  "first_seen": "2026-10-21 08:50 UTC"
  }
 ]
