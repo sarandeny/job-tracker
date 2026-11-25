@@ -1,5 +1,23 @@
 [
  {
+  "key": "Amazon:10611590",
+  "company": "Amazon",
+  "title": "Security Engineer, PaySec, StoreSec",
+  "location": "Bengaluru, Karnataka, IND",
+  "url": "https://www.amazon.jobs/en/jobs/10611590/security-engineer-paysec-storesec",
+  "posted": "November 24, 2026",
+  "summary": "Come build the future with us! In Payments Security (PaySec), we protect the foundational systems and products that allow Amazon to accept payments for all goods, content, and services that people buy - 3+ years of programming in Python, Ruby, Go, Swift, Java, .Net, C++ or simila",
+  "score": 74,
+  "reasons": [
+   "title: security engineer",
+   "India",
+   "2+ yrs",
+   "skills: python",
+   "priority company"
+  ],
+  "first_seen": "2026-11-25 13:23 UTC"
+ },
+ {
   "key": "NVIDIA:JR2026874",
   "company": "NVIDIA",
   "title": "Cyber Security Engineer",
